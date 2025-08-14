@@ -16,7 +16,7 @@ export function RegisterForm({
   };
 
   return (
-    <div className={cn("flex flex-col gap-6", className)} {...props}>
+    <div className={cn("flex flex-col gap-6", className)}>
       <div className="flex flex-col items-center gap-2 text-center">
         <h1 className="text-2xl font-bold">Register your account</h1>
         <p className="text-muted-foreground text-sm text-balance">
@@ -25,7 +25,7 @@ export function RegisterForm({
       </div>
       <div className="grid gap-6">
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)}>
+          <form onSubmit={form.handleSubmit(onSubmit)} {...props}>
             <FormField
               control={form.control}
               name="name"
